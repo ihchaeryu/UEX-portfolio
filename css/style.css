@@ -1,0 +1,244 @@
+/* Reset some default styles */
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Load the custom font using @font-face */
+@font-face {
+    font-family: 'MainFont';
+    src: url('TitilliumWeb-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MainFont';
+    src: url('TitilliumWeb-SemiBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MainFont';
+    src: url('TitilliumWeb-Light.ttf') format('truetype');
+    font-weight: lighter;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MainFont';
+    src: url('TitilliumWeb-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'MainFont';
+    src: url('TitilliumWeb-SemiBoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* Apply the custom font to the body */
+body {
+    font-family: 'MainFont', sans-serif;
+    line-height: 1.6;
+    background-color: #074666;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Style the header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #074666;
+    color: #fff;
+    z-index: 1000; /* Ensure the header appears above other elements */
+    padding: 20px;
+}
+
+/* Style for the navigation menu */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff; /* Set your desired text color */
+    font-weight: bold;
+}
+
+/* Style the main content */
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    padding-top: 60px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the main section */
+main section {
+    text-align: left;
+}
+
+/* Style for the h1 element */
+h1 {
+    font-size: 20px; /* Set your desired font size */
+    font-weight: bold; /* Set your desired font weight */
+}
+
+/* Style for the h2 element */
+h2 {
+    font-size: 34px; /* Set your desired font size */
+    font-weight: bold; /* Set your desired font weight */
+}
+
+/* Style for the p element */
+p {
+    font-size: 16px; /* Set your desired font size */
+    font-weight: normal; /* Set your desired font weight */
+    padding-bottom: 20px;
+}
+
+/* ... Your existing styles ... */
+
+/* Style for project cards section */
+.project-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10px;
+}
+
+/* Style for each project card */
+.project-card {
+    position: relative;
+    flex: 0 0 calc(50% - 20px); /* 2:3 aspect ratio (width:height) */
+    max-width: calc(50% - 20px); /* Adjust max-width based on your design */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s; /* Add smooth transition on transform */
+}
+
+/* Hover effect for the project card */
+.project-card:hover {
+    transform: scale(1.05); /* Slightly increase the size on hover */
+}
+
+/* Style for project card image */
+.project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain original ratio, covering the entire container */
+    border-radius: 10px;
+}
+
+/* Style for title overlay */
+.project-card .title-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    color: #fff;
+    background: rgba(3, 34, 49, 0.554);
+    padding: 10px;
+}
+
+/* Responsive styles for project cards */
+@media (max-width: 768px) {
+    .project-card {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+/* Style for the pop-up */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+/* Style for the pop-up content */
+.popup-content {
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 80%;
+    width: 1000px; /* Adjust the width based on your design */
+    text-align: center;
+}
+
+/* Style for the image in the pop-up */
+.popup-content img {
+    max-width: 100%; /* Set the maximum width to 100% of the container */
+    max-height: 80vh; /* Set the maximum height to 80% of the viewport height */
+    object-fit: contain; /* Maintain the image's aspect ratio within the specified dimensions */
+    border-radius: 10px;
+}
+
+/* Close button style */
+.popup-content button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Responsive styles for the pop-up content */
+@media (max-width: 768px) {
+    .popup-content {
+        max-width: 100%;
+    }
+}
+
+/* Style the footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #074666;
+    color: #fff;
+    font-weight: lighter;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    nav ul {
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UEX Portfolio</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/popup.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li class="project-nav-item"><a href="#">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1>Future of the City</h1>
+            <h2>Experience Design Portfolio</h2>
+            <p>How will the user experience within the city change in the future? Throughout the semester,
+                I worked on 6 topics of urban experience, each of the projects focusing on
+                different perspectives and methods of design study. With the help of generative AI, 
+                 my 6 different projects could expand through various spectrums of urban experience. </p>
+        </section>
+
+        <section class="project-cards">
+            <!-- Project 1 -->
+            <div class="project-card" onclick="openPopup('images/proj1_desc.png')">
+                <img src="images/proj1.png" alt="Project 1 Image">
+                <div class="title-overlay">
+                    <h3>EMPATHY</h3>
+                </div>
+            </div>
+        
+            <!-- Project 2 -->
+            <div class="project-card" onclick="openPopup('images/proj2_desc.png')">
+                <img src="images/proj2.png" alt="Project 2 Image">
+                <div class="title-overlay">
+                    <h3>DECOMPOSITION</h3>
+                </div>
+            </div>
+        
+        </section>
+        <section class="project-cards">
+            <!-- Project 3 -->
+            <div class="project-card" onclick="openPopup('images/proj3_desc.png')">
+                <img src="images/proj3.png" alt="Project 1 Image">
+                <div class="title-overlay">
+                    <h3>ANALOGY</h3>
+                </div>
+            </div>
+        
+            <!-- Project 4 -->
+            <div class="project-card" onclick="openPopup('images/proj4_desc.png')">
+                <img src="images/proj4.png" alt="Project 2 Image">
+                <div class="title-overlay">
+                    <h3>STYLE</h3>
+                </div>
+            </div>
+        
+        </section>
+        <section class="project-cards">
+            <!-- Project 5 -->
+            <div class="project-card" onclick="openPopup('images/proj5_desc.png')">
+                <img src="images/proj5.png" alt="Project 1 Image">
+                <div class="title-overlay">
+                    <h3>CONTEXT</h3>
+                </div>
+            </div>
+        
+            <!-- Project 6 -->
+            <div class="project-card" onclick="openPopup('images/proj6_desc.png')">
+                <img src="images/proj6.png" alt="Project 2 Image">
+                <div class="title-overlay">
+                    <h3>BLEND</h3>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pop-up container -->
+    <div class="popup" onclick="closePopup()">
+        <div class="popup-content"></div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Ryu Ihchae UEX Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script src="./js/nav.js"></script>
+</body>
+</html>
